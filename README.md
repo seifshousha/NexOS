@@ -119,7 +119,6 @@ This project demonstrates:
 **Seif Shousha**
 
 - GitHub: https://github.com/seifshousha
-- LinkedIn: *(Add your LinkedIn profile here)*
 
 ---
 
