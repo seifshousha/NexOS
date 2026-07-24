@@ -1,0 +1,252 @@
+{
+  "name": "/",
+  "is_dir": true,
+  "content": "",
+  "created": 1777107510.8418834,
+  "modified": 1777870062.3567958,
+  "size": 0,
+  "children": {
+    "bin": {
+      "name": "bin",
+      "is_dir": true,
+      "content": "",
+      "created": 1777107510.8418834,
+      "modified": 1777107510.8418834,
+      "size": 0,
+      "children": {}
+    },
+    "etc": {
+      "name": "etc",
+      "is_dir": true,
+      "content": "",
+      "created": 1777107510.8418834,
+      "modified": 1777107510.873123,
+      "size": 0,
+      "children": {
+        "pyos.conf": {
+          "name": "pyos.conf",
+          "is_dir": false,
+          "content": "[kernel]\nversion=1.0\ndebug=false\n",
+          "created": 1777107510.873123,
+          "modified": 1777107587.5140615,
+          "size": 33,
+          "children": {}
+        }
+      }
+    },
+    "home": {
+      "name": "home",
+      "is_dir": true,
+      "content": "",
+      "created": 1777107510.8418834,
+      "modified": 1777107510.8418834,
+      "size": 0,
+      "children": {
+        "user": {
+          "name": "user",
+          "is_dir": true,
+          "content": "",
+          "created": 1777107510.8418834,
+          "modified": 1777868077.5740266,
+          "size": 0,
+          "children": {
+            "projects": {
+              "name": "projects",
+              "is_dir": true,
+              "content": "",
+              "created": 1777107510.8574986,
+              "modified": 1777107510.8574986,
+              "size": 0,
+              "children": {
+                "pyos": {
+                  "name": "pyos",
+                  "is_dir": true,
+                  "content": "",
+                  "created": 1777107510.8574986,
+                  "modified": 1777107510.8574986,
+                  "size": 0,
+                  "children": {}
+                }
+              }
+            },
+            "test.txt": {
+              "name": "test.txt",
+              "is_dir": false,
+              "content": "Hello PyOS!\n",
+              "created": 1777117293.0518563,
+              "modified": 1777874137.7653613,
+              "size": 12,
+              "children": {}
+            },
+            "x.pdf": {
+              "name": "x.pdf",
+              "is_dir": false,
+              "content": "",
+              "created": 1777157146.058524,
+              "modified": 1777157146.058524,
+              "size": 0,
+              "children": {}
+            },
+            "Desktop": {
+              "name": "Desktop",
+              "is_dir": true,
+              "content": "",
+              "created": 1777866997.3044713,
+              "modified": 1777873614.4482875,
+              "size": 0,
+              "children": {
+                "TestFolder": {
+                  "name": "TestFolder",
+                  "is_dir": true,
+                  "content": "",
+                  "created": 1777867626.699112,
+                  "modified": 1777867626.699112,
+                  "size": 0,
+                  "children": {}
+                },
+                "TestFromTerminal": {
+                  "name": "TestFromTerminal",
+                  "is_dir": true,
+                  "content": "",
+                  "created": 1777868432.9406545,
+                  "modified": 1777868432.9406545,
+                  "size": 0,
+                  "children": {}
+                },
+                "hello.txt": {
+                  "name": "hello.txt",
+                  "is_dir": false,
+                  "content": "",
+                  "created": 1777868434.1409242,
+                  "modified": 1777868434.1409242,
+                  "size": 0,
+                  "children": {}
+                },
+                "MyFolder": {
+                  "name": "MyFolder",
+                  "is_dir": true,
+                  "content": "",
+                  "created": 1777869831.8567977,
+                  "modified": 1777869831.8567977,
+                  "size": 0,
+                  "children": {}
+                },
+                "k.sh": {
+                  "name": "k.sh",
+                  "is_dir": false,
+                  "content": "",
+                  "created": 1777872236.986718,
+                  "modified": 1777874449.59587,
+                  "size": 0,
+                  "children": {}
+                },
+                "test.sh": {
+                  "name": "test.sh",
+                  "is_dir": false,
+                  "content": "",
+                  "created": 1777873614.4482875,
+                  "modified": 1777873614.4482875,
+                  "size": 0,
+                  "children": {}
+                }
+              }
+            },
+            "Documents": {
+              "name": "Documents",
+              "is_dir": true,
+              "content": "",
+              "created": 1777868077.5729072,
+              "modified": 1777868077.5729072,
+              "size": 0,
+              "children": {}
+            },
+            "Downloads": {
+              "name": "Downloads",
+              "is_dir": true,
+              "content": "",
+              "created": 1777868077.5740266,
+              "modified": 1777868077.5740266,
+              "size": 0,
+              "children": {}
+            }
+          }
+        }
+      }
+    },
+    "tmp": {
+      "name": "tmp",
+      "is_dir": true,
+      "content": "",
+      "created": 1777107510.8418834,
+      "modified": 1777107510.8574986,
+      "size": 0,
+      "children": {
+        "scratch": {
+          "name": "scratch",
+          "is_dir": true,
+          "content": "",
+          "created": 1777107510.8574986,
+          "modified": 1777107587.5453117,
+          "size": 0,
+          "children": {}
+        }
+      }
+    },
+    "var": {
+      "name": "var",
+      "is_dir": true,
+      "content": "",
+      "created": 1777107510.8418834,
+      "modified": 1777107510.8418834,
+      "size": 0,
+      "children": {
+        "log": {
+          "name": "log",
+          "is_dir": true,
+          "content": "",
+          "created": 1777107510.8418834,
+          "modified": 1777107510.8574986,
+          "size": 0,
+          "children": {
+            "boot.log": {
+              "name": "boot.log",
+              "is_dir": false,
+              "content": "VirtOS kernel booted at Mon May  4 09:15:50 2026\n",
+              "created": 1777107510.8418834,
+              "modified": 1777875350.3724751,
+              "size": 49,
+              "children": {}
+            }
+          }
+        }
+      }
+    },
+    "Desktop": {
+      "name": "Desktop",
+      "is_dir": true,
+      "content": "",
+      "created": 1777870062.342102,
+      "modified": 1777870062.342102,
+      "size": 0,
+      "children": {}
+    },
+    "Documents": {
+      "name": "Documents",
+      "is_dir": true,
+      "content": "",
+      "created": 1777870062.3503256,
+      "modified": 1777870062.3503256,
+      "size": 0,
+      "children": {}
+    },
+    "Downloads": {
+      "name": "Downloads",
+      "is_dir": true,
+      "content": "",
+      "created": 1777870062.3567958,
+      "modified": 1777870062.3567958,
+      "size": 0,
+      "children": {}
+    }
+  }
+}

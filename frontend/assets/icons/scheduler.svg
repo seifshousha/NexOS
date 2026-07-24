@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7c3aed"/><stop offset="100%" stop-color="#4c1d95"/>
+    </linearGradient>
+    <linearGradient id="sh" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="white" stop-opacity="0.14"/><stop offset="55%" stop-color="white" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="48" height="48" rx="11" fill="url(#bg)"/>
+  <rect width="48" height="26" rx="11" fill="url(#sh)"/>
+  <rect width="48" height="48" rx="11" fill="none" stroke="white" stroke-width="0.5" stroke-opacity="0.12"/>
+  <!-- CPU box -->
+  <rect x="16" y="14" width="16" height="16" rx="3" fill="none" stroke="white" stroke-width="2"/>
+  <!-- CPU core grid -->
+  <rect x="19" y="17" width="4" height="4" rx="1" fill="white" opacity="0.7"/>
+  <rect x="25" y="17" width="4" height="4" rx="1" fill="white" opacity="0.7"/>
+  <rect x="19" y="23" width="4" height="4" rx="1" fill="white" opacity="0.4"/>
+  <rect x="25" y="23" width="4" height="4" rx="1" fill="white" opacity="0.4"/>
+  <!-- Queue items -->
+  <rect x="7" y="34" width="8" height="4" rx="1.5" fill="white" opacity="0.9"/>
+  <rect x="18" y="34" width="8" height="4" rx="1.5" fill="white" opacity="0.6"/>
+  <rect x="29" y="34" width="8" height="4" rx="1.5" fill="white" opacity="0.35"/>
+  <!-- Arrow from queue to CPU -->
+  <line x1="24" y1="34" x2="24" y2="30" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+  <polyline points="21,32 24,29 27,32" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

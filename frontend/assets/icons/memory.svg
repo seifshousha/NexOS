@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0891b2"/><stop offset="100%" stop-color="#164e63"/>
+    </linearGradient>
+    <linearGradient id="sh" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="white" stop-opacity="0.14"/><stop offset="55%" stop-color="white" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="48" height="48" rx="11" fill="url(#bg)"/>
+  <rect width="48" height="26" rx="11" fill="url(#sh)"/>
+  <rect width="48" height="48" rx="11" fill="none" stroke="white" stroke-width="0.5" stroke-opacity="0.12"/>
+  <!-- RAM chip outline -->
+  <rect x="9" y="13" width="30" height="22" rx="3" fill="none" stroke="white" stroke-width="2"/>
+  <!-- Memory cells grid 3x2 -->
+  <rect x="12" y="17" width="6" height="5" rx="1" fill="white" opacity="0.85"/>
+  <rect x="21" y="17" width="6" height="5" rx="1" fill="white" opacity="0.5"/>
+  <rect x="30" y="17" width="6" height="5" rx="1" fill="white" opacity="0.7"/>
+  <rect x="12" y="25" width="6" height="5" rx="1" fill="white" opacity="0.4"/>
+  <rect x="21" y="25" width="6" height="5" rx="1" fill="white" opacity="0.85"/>
+  <rect x="30" y="25" width="6" height="5" rx="1" fill="white" opacity="0.3"/>
+  <!-- Pins top -->
+  <line x1="16" y1="9"  x2="16" y2="13" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="24" y1="9"  x2="24" y2="13" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="32" y1="9"  x2="32" y2="13" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Pins bottom -->
+  <line x1="16" y1="35" x2="16" y2="39" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="24" y1="35" x2="24" y2="39" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="32" y1="35" x2="32" y2="39" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VirtOS — Desktop</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<!-- BOOT SCREEN -->
+<div id="boot-screen">
+  <div class="boot-content">
+    <div class="boot-logo">VirtOS</div>
+    <div class="boot-version">Version 1.0</div>
+    <div class="boot-steps" id="boot-steps"></div>
+    <div class="boot-bar"><div class="boot-fill" id="boot-fill"></div></div>
+  </div>
+</div>
+
+<!-- DESKTOP -->
+<div id="desktop" style="display:none">
+  <div id="notification-container"></div>
+  <div id="desktop-icons">
+    <div class="desktop-icon" data-app="terminal"><div class="icon-glyph"><img src="/static/assets/icons/terminal.svg" alt="Terminal" draggable="false"></div><span>Terminal</span></div>
+    <div class="desktop-icon" data-app="files"><div class="icon-glyph"><img src="/static/assets/icons/files.svg" alt="Files" draggable="false"></div><span>Files</span></div>
+    <div class="desktop-icon" data-app="processes"><div class="icon-glyph"><img src="/static/assets/icons/processes.svg" alt="Processes" draggable="false"></div><span>Processes</span></div>
+    <div class="desktop-icon" data-app="monitor"><div class="icon-glyph"><img src="/static/assets/icons/monitor.svg" alt="Monitor" draggable="false"></div><span>Monitor</span></div>
+    <div class="desktop-icon" data-app="sysinfo"><div class="icon-glyph"><img src="/static/assets/icons/sysinfo.svg" alt="System Info" draggable="false"></div><span>System Info</span></div>
+    <div class="desktop-icon" data-app="calculator"><div class="icon-glyph"><img src="/static/assets/icons/calculator.svg" alt="Calculator" draggable="false"></div><span>Calculator</span></div>
+    <div class="desktop-icon" data-app="logs"><div class="icon-glyph"><img src="/static/assets/icons/logs.svg" alt="Logs" draggable="false"></div><span>Logs</span></div>
+
+    <div class="desktop-icon" data-app="settings"><div class="icon-glyph"><img src="/static/assets/icons/settings.svg" alt="Settings" draggable="false"></div><span>Settings</span></div>
+  </div>
+  <div id="window-layer"></div>
+  <div id="taskbar">
+    <button id="start-btn" title="Start Menu"><span class="start-icon">🖥</span><span>VirtOS</span></button>
+    <div id="taskbar-windows"></div>
+    <div id="taskbar-tray">
+      <span id="tray-cpu" class="tray-item">CPU 0%</span>
+      <span id="tray-mem" class="tray-item">MEM 0%</span>
+      <span id="taskbar-clock"></span>
+      <button id="tray-power" class="tray-item" style="cursor:pointer" title="Power">⏻</button>
+    </div>
+  </div>
+</div>
+
+<!-- START MENU -->
+<div class="start-menu" id="start-menu">
+  <div class="sm-left">
+    <div class="sm-search-wrap"><input class="sm-search" id="sm-search" placeholder="Search apps..." autocomplete="off"></div>
+    <div class="sm-apps-label">All Apps</div>
+    <div class="sm-apps-grid" id="sm-apps-grid"></div>
+  </div>
+  <div class="sm-right">
+    <div class="sm-user"><div class="sm-user-avatar">👤</div><div><div class="sm-user-name">user</div><div class="sm-user-role">standard</div></div></div>
+    <div class="sm-pinned-label">Quick Access</div>
+    <div class="sm-pinned">
+      <button class="sm-pin-btn" data-app="settings"><span class="sm-pin-icon"><img src="/static/assets/icons/settings.svg" alt="Settings" draggable="false"></span><span>Settings</span></button>
+      <button class="sm-pin-btn" data-app="files"><span class="sm-pin-icon"><img src="/static/assets/icons/files.svg" alt="Files" draggable="false"></span><span>Files</span></button>
+      <button class="sm-pin-btn" data-app="terminal"><span class="sm-pin-icon"><img src="/static/assets/icons/terminal.svg" alt="Terminal" draggable="false"></span><span>Terminal</span></button>
+    </div>
+    <div class="sm-spacer"></div>
+    <div class="sm-power-row"><button class="sm-power-btn" id="sm-power-btn">⏻ Power</button></div>
+  </div>
+</div>
+
+<!-- POWER DROPDOWN -->
+<div class="power-dropdown hidden" id="power-dropdown">
+  <button class="power-item" id="pw-sleep">💤 Sleep</button>
+  <button class="power-item" id="pw-restart">🔄 Restart</button>
+  <button class="power-item" id="pw-shutdown">⏻ Shut Down</button>
+</div>
+
+
+
+<!-- POWER OVERLAY (hidden by default) -->
+<div id="power-overlay" style="display:none;position:fixed;inset:0;z-index:9999999;background:#000;align-items:center;justify-content:center;flex-direction:column;gap:16px">
+  <div style="font-size:64px">⏻</div>
+  <div style="font-size:18px;color:#388bfd;font-weight:600" id="power-msg">Shutting down...</div>
+</div>
+
+<!-- SLEEP OVERLAY (hidden by default) -->
+<div id="sleep-overlay" style="display:none;position:fixed;inset:0;z-index:9999998;background:rgba(0,0,0,0.92);backdrop-filter:blur(20px);align-items:center;justify-content:center;flex-direction:column;gap:16px;cursor:pointer">
+  <div style="font-size:56px;opacity:0.6">💤</div>
+  <div style="font-size:14px;color:#484f58">Click anywhere to wake</div>
+</div>
+
+<!-- SNAP PREVIEW -->
+<div class="snap-preview hidden" id="snap-preview"></div>
+
+<!-- WINDOW TEMPLATE -->
+<template id="window-template">
+  <div class="window" data-wid="">
+    <div class="window-titlebar">
+      <span class="window-icon"></span>
+      <span class="window-title"></span>
+      <div class="window-controls">
+        <button class="win-btn win-minimize" title="Minimize">─</button>
+        <button class="win-btn win-maximize" title="Maximize">□</button>
+        <button class="win-btn win-close" title="Close">✕</button>
+      </div>
+    </div>
+    <div class="window-body"></div>
+  </div>
+</template>
+
+<script src="/static/app.js"></script>
+
+<script src="/static/extras.js"></script>
+</body>
+</html>
